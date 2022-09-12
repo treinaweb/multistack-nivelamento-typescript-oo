@@ -1,27 +1,22 @@
-var __extends = (this && this.__extends) || (function () {
-    var extendStatics = function (d, b) {
-        extendStatics = Object.setPrototypeOf ||
-            ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
-            function (d, b) { for (var p in b) if (Object.prototype.hasOwnProperty.call(b, p)) d[p] = b[p]; };
-        return extendStatics(d, b);
-    };
-    return function (d, b) {
-        if (typeof b !== "function" && b !== null)
-            throw new TypeError("Class extends value " + String(b) + " is not a constructor or null");
-        extendStatics(d, b);
-        function __() { this.constructor = d; }
-        d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
-    };
-})();
+"use strict";
+/* import { Saldo } from "../interfaces/saldo.js";
 import { Pessoa } from "./pessoa.js";
-var Diarista = /** @class */ (function (_super) {
-    __extends(Diarista, _super);
-    function Diarista() {
-        return _super !== null && _super.apply(this, arguments) || this;
-    }
-    Diarista.prototype.atenderDiarista = function (clienteNome) {
-        console.log("Diarista ".concat(this.nome, " est\u00E1 atendendo o cliente ").concat(clienteNome));
-    };
-    return Diarista;
-}(Pessoa));
-export { Diarista };
+
+export class Diarista extends Pessoa implements Saldo{
+  chavePix!: string;
+  
+  atenderDiarista(clienteNome: string): void {
+    console.log(
+      `Diarista ${this.nome} está atendendo o cliente ${clienteNome}`
+    );
+  }
+
+  depositar(valor: number) {
+    this.saldo = this.saldo + valor;
+  }
+
+  sacar(valor: number): void {
+      this.saldo = this.saldo - valor;
+  }
+}
+ */ 

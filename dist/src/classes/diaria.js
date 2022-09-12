@@ -13,27 +13,18 @@ var __extends = (this && this.__extends) || (function () {
         d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
     };
 })();
-import { Pessoa } from "./pessoa.js";
-var Cliente = /** @class */ (function (_super) {
-    __extends(Cliente, _super);
-    function Cliente() {
-        var _this = _super !== null && _super.apply(this, arguments) || this;
-        _this._saldo = 0;
-        return _this;
+import { Atendimento } from "./atendimento.js";
+var Diaria = /** @class */ (function (_super) {
+    __extends(Diaria, _super);
+    function Diaria() {
+        return _super !== null && _super.apply(this, arguments) || this;
     }
-    Object.defineProperty(Cliente.prototype, "saldo", {
-        get: function () {
-            return this._saldo;
-        },
-        enumerable: false,
-        configurable: true
-    });
-    Cliente.prototype.depositar = function (valor) {
-        this._saldo = this.saldo + valor * 1.1;
+    Diaria.prototype.definirvalor = function (valor) {
+        if (valor < 1) {
+            return console.log('valor deve ser maior que 0');
+        }
+        return this.valor = valor;
     };
-    Cliente.prototype.sacar = function (valor) {
-        this._saldo = this.saldo - valor;
-    };
-    return Cliente;
-}(Pessoa));
-export { Cliente };
+    return Diaria;
+}(Atendimento));
+export { Diaria };
